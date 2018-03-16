@@ -1,7 +1,7 @@
 package cn.jc;
 
+import cn.jc.datastructure.search.ErfenSearchB;
 import cn.jc.datastructure.tree.BinTree;
-import cn.jc.datastructure.tree.ErfenSearchB;
 
 import java.util.LinkedList;
 import java.util.Queue;
