@@ -1,4 +1,4 @@
-package cn.jc.datastructure.tree;
+package cn.jc.datastructure.search;
 
 public class ErfenSearchB {
 
