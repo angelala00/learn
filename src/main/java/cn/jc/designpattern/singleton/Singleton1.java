@@ -11,10 +11,10 @@ public class Singleton1 {
     }
 
     public static Singleton1 getInstance() {
-        return UserSingletonHolder.INSTANCE;
+        return SingletonHolder.INSTANCE;
     }
 
-    private static class UserSingletonHolder {
+    private static class SingletonHolder {
         private static final Singleton1 INSTANCE = new Singleton1();
     }
 }

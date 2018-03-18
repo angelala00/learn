@@ -9,6 +9,7 @@ import java.util.Set;
 
 public class MainTest {
     public static void main(String[] args){
+        Double.parseDouble("");
         int a = testE();
         System.out.println("testE.result:a=" + a);
         ThreadLocal<String> tl1 = new ThreadLocal();

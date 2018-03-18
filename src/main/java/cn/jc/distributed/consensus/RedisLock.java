@@ -1,4 +1,4 @@
-package cn.jc.todo;
+package cn.jc.distributed.consensus;
 
 public class RedisLock {
 
