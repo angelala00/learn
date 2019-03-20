@@ -1,5 +1,9 @@
 package cn.jc.distributed.consensus;
 
+/**
+ * 见RedisLock3的多个疑问
+ */
+@Deprecated
 public class RedisLock {
 
     private static int DEFAULT_ACQUIRY_RESOLUTION_MILLIS = 100;
