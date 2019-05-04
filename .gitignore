@@ -1,6 +1,10 @@
 # idea file
 .idea/
 
+src/.DS_Store
+
+target/
+
 # Compiled class file
 *.class
 

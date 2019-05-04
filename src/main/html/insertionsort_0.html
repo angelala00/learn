@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<div id="bubbleSortdiv"></div>
+
+<script type="text/javascript">
+
+    function alertprint(item) {
+        console.log(JSON.stringify(item));
+    }
+
+    var canvas_width = 500;
+    var canvas_hight = 200;
+    var canvas_hight_half = canvas_hight / 2;
+    var canvas_background_color = "rgba(135,178,141,0.79)";
+    var canvas_item_color = "rgba(91,95,97,0.74)";
+    // var inputArr = [1, 4, 2, 6];
+    // var item_max = 6;
+    var inputArr = [3, 44, 38, 5,47,15,36,26,27];
+    var item_max = 47;
+    // var inputArr = [1, 17, 6, 9, 2, 4, 100, 38, 94, 29, 46, 3, 57, 65, 19, 5];
+    // var item_max = 100;
+    var item_jianju = 10;
+    var item_width_common = canvas_width / inputArr.length - item_jianju;
+    var item_hight_max = canvas_hight_half * 0.9;
+    var item_hight_min = 15;
+
+    //初始化背景
+    var inibg = function () {
+        $("#bubbleSortdiv").css("background", canvas_background_color);
+        $("#bubbleSortdiv").css("height", canvas_hight + "px");
+        $("#bubbleSortdiv").css("width", canvas_width + "px");
+        $("#bubbleSortdiv").css("position", "relative");
+    }
+    //初始化数组
+    var iniarr = function () {
+        for (i in inputArr) {
+            //创建div并加到背景div中
+            var item_hight = (item_hight_max - item_hight_min) * inputArr[i] / item_max + item_hight_min;
+            var newdiv = $("<div></div>");
+            newdiv.attr("id", "item_" + i);
+            newdiv.attr("value", inputArr[i]);
+            newdiv.append("<span>" + inputArr[i] + "</span>");
+            newdiv.css("background", canvas_item_color);
+            newdiv.addClass("arritem");
+            newdiv.css("height", item_hight);
+            newdiv.css("width", item_width_common);
+            newdiv.css("position", "absolute");
+            newdiv.css("bottom", canvas_hight_half + "px");
+            newdiv.css("left", i * (item_width_common + item_jianju) + "px");
+            newdiv.appendTo($("#bubbleSortdiv"));
+        }
+    }
+    //比较两个数高亮
+    var showcomparecolor = function (x, y) {
+        $("#item_" + x).css("background", "red");
+        $("#item_" + y).css("background", "red");
+    }
+    //比较两个数高亮恢复
+    var revertcomparecolor = function () {
+        $(".arritem").css("background", canvas_item_color);
+    }
+    var doswap = function (arr, x, y) {
+
+        var itemx = $("#item_" + x);
+        var itemy = $("#item_" + y);
+        var leftx = itemx.css("left");
+        var lefty = itemy.css("left");
+
+        var tmp = arr[x];
+        setTimeout(function () {
+            itemx.css("bottom", canvas_hight_half - 5 - itemx.height());
+        },200);
+
+
+        arr[x] = arr[y];
+        setTimeout(function () {
+            itemy.attr("id", "item_" + x);
+            itemy.css("left", leftx);
+        },400);
+
+
+
+        arr[y] = tmp;
+        setTimeout(function () {
+            itemx.attr("id", "item_" + y);
+            itemx.css("left", lefty);
+        },600);
+
+
+        itemy.insertBefore(itemx);
+        setTimeout(function () {
+            itemx.css("bottom", canvas_hight_half);
+        },700);
+
+
+    }
+    var timeoutmap = [];
+    var sort = function () {
+        var x = 0;
+        for (var i = 1; i < inputArr.length; i++) {
+            for (var j = i; j > 0; j--) {
+                doSetTimeout(i,j,x++);
+            }
+        }
+
+
+    }
+    inibg();
+    iniarr();
+    sort();
+
+    function doSetTimeout(i,j,x){
+        timeoutmap[i + "-" + j] = setTimeout(function () {
+            // alertprint(x)
+            setTimeout(function () {
+                showcomparecolor(j, j - 1);
+            },100);
+
+            setTimeout(function () {
+
+                if (inputArr[j] < inputArr[j - 1]) {
+                    doswap(inputArr, j, j - 1);
+                } else {
+                    for (var aaa = j; aaa > 0; aaa--) {
+                        clearTimeout(timeoutmap[i + "-" + aaa]);
+                    }
+
+                    // for (var ii = i; ii < inputArr.length; ii++) {
+                    //     for (var jj = j; jj > 0; jj--) {
+                    //         clearTimeout(timeoutmap[ii + "-" + jj]);
+                    //     }
+                    // }
+                    // var xx = 0;
+                    // for (var ii = i; ii < inputArr.length; ii++) {
+                    //     for (var jj = j; jj > 0; jj--) {
+                    //         doSetTimeout(ii,jj,xx++);
+                    //     }
+                    // }
+
+                }
+            },200);
+
+            setTimeout(function () {
+                revertcomparecolor();
+            },900);
+        },x * 1000)
+    }
+
+</script>
+
+
+</body>
+</html>

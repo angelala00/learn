@@ -5,9 +5,9 @@ import cn.jc.util.Util;
 public class BubbleSort {
 
     /**
-     * 最差的冒泡排序
+     * 最差的冒泡排序，（较笨的写法）
      * n*(n-1)次比较，0-n*(n-1)次交换
-     *
+     * 需要一个额外变量的空间
      * @param arr
      */
     public void sort0(int[] arr) {
@@ -26,9 +26,9 @@ public class BubbleSort {
     }
 
     /**
-     * 稍优化一点的冒泡排序
+     * 稍优化一点的冒泡排序，（正常的写法）
      * n*(n-1)/2次比较，（0-n*(n-1)/2）次交换
-     *
+     * 需要一个额外变量的空间
      * @param arr
      */
     public void sort(int[] arr) {

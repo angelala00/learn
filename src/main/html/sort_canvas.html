@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="bubbleSort" width="500" height="100"></canvas>
+
+<script type="text/javascript">
+
+    function alertprint(item) {
+        console.log(JSON.stringify(item));
+    }
+
+    var canvas_width = 500;
+    var canvas_hight = 100;
+    var canvas_background_color = "rgba(135,178,141,0.79)";
+    var canvas_item_color = "rgba(91,95,97,0.74)";
+    var inputArr = [1, 4, 2, 6];
+    var item_max = 6;
+    // var inputArr = [1, 17, 6, 9, 2, 4, 100, 38, 94, 29, 46, 3, 57, 65, 19, 5];
+    // var item_max = 100;
+    var item_jianju = 10;
+    var item_width_common = canvas_width / inputArr.length - item_jianju;
+    var item_hight_max = canvas_hight * 0.9;
+
+    //初始化背景
+    var inibg = function () {
+        var c = document.getElementById("bubbleSort");
+        var bg = c.getContext("2d");
+        bg.fillStyle = canvas_background_color;
+        bg.fillRect(0, 0, canvas_width, canvas_hight);
+    }
+
+    //初始化数组
+    function init(inputArr) {
+        var inputArrObj = [];
+        for (i in inputArr) {
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = canvas_item_color;
+            var item_hight = item_hight_max * inputArr[i] / item_max;
+            ctx.fillRect(i * (item_width_common + item_jianju), canvas_hight - item_hight, item_width_common, item_hight);
+            var item = {
+                "ctx": ctx,
+                "x1": i * (item_width_common + item_jianju),
+                "y1": canvas_hight - item_hight,
+                "x2": item_width_common,
+                "y2": item_hight
+            };
+            inputArrObj[i] = item;
+        }
+        return inputArrObj;
+    }
+
+    function showcompare(x, y) {
+        // inputArrObj[x].ctx.clearRect(inputArrObj[x].x1,inputArrObj[x].y1,inputArrObj[x].x2,inputArrObj[x].y2);
+        inputArrObj[x].ctx.fillStyle = "red";
+        inputArrObj[x].ctx.fillRect(inputArrObj[x].x1, inputArrObj[x].y1, inputArrObj[x].x2, inputArrObj[x].y2);
+        //clear
+        //显示红色
+        inputArrObj[y].ctx.fillStyle = "red";
+        inputArrObj[y].ctx.fillRect(inputArrObj[y].x1, inputArrObj[y].y1, inputArrObj[y].x2, inputArrObj[y].y2);
+        //clear
+        //显示红色
+
+        //clear
+        //显示原色
+        //clear
+        //显示原色
+
+    }
+    function showswap(x,y){
+
+    }
+
+
+    inibg();
+    var inputArrObj = init(inputArr);
+
+</script>
+
+</body>
+</html>
