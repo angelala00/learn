@@ -1,3 +1,5 @@
+package cn.jc.contest;
+
 import java.io.BufferedWriter;
 import java.io.Closeable;
 import java.io.FileOutputStream;

@@ -1,3 +1,5 @@
+package cn.jc.contest;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.nio.file.Files;
@@ -61,7 +63,7 @@ public class Solution {
 //
 //        for (Map.Entry<String, List<String>> s : mappppp2.entrySet()) {
 //            List<String> result = s.getValue();
-//            MainFrame.addSet(result.toArray(new String[result.size()]));
+//            cn.jc.contest.MainFrame.addSet(result.toArray(new String[result.size()]));
 //        }
     }
 ////    private Map<String, List<String>> mappppp2 = new HashMap<>(1000000);

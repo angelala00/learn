@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>InsertionSort</title>
 </head>
 <body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -17,8 +17,8 @@
     var canvas_width = 500;
     var canvas_hight = 200;
     var canvas_hight_half = canvas_hight / 2;
-    var canvas_background_color = "rgba(135,178,141,0.79)";
-    var canvas_item_color = "rgba(91,95,97,0.74)";
+    var canvas_background_color = "rgba(0,110,169,0.79)";
+    var canvas_item_color = "rgba(253,254,254,0.74)";
     // var inputArr = [1, 4, 2, 6];
     // var item_max = 6;
     var inputArr = [3, 44, 38, 5,47,15,36,26,27];
@@ -29,7 +29,7 @@
     var item_width_common = canvas_width / inputArr.length - item_jianju;
     var item_hight_max = canvas_hight_half * 0.9;
     var item_hight_min = 15;
-    var active_time = 200;
+    var active_time = 150;
 
     //初始化背景
     var inibg = function () {
@@ -59,8 +59,8 @@
     }
     //比较两个数高亮
     var showcomparecolor = function (x, y) {
-        $("#item_" + x).css("background", "red");
-        $("#item_" + y).css("background", "red");
+        $("#item_" + x).css("background", "rgba(255,255,0,1)");
+        $("#item_" + y).css("background", "rgba(255,255,0,1)");
     }
     //比较两个数高亮恢复
     var revertcomparecolor = function () {

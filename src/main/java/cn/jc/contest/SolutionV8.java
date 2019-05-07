@@ -1,18 +1,20 @@
+package cn.jc.contest;
+
 import java.io.BufferedReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
- * V6
- * V3优化版本
+ * V6->set换为list
+ * V8
  */
-public class SolutionV6 {
+public class SolutionV8 {
     private Map<String, String> setIndex = new HashMap<>(100000);
-    private Map<String, Set<String>> mappppp = new HashMap<>(1000000);
+    private Map<String, List<String>> mappppp = new HashMap<>(1000000);
 
     public void init(String tempDir) throws Exception {
         // 此部分不计入执行用时，提供了临时目录用于暂存数据，请合理发挥。
@@ -39,29 +41,27 @@ public class SolutionV6 {
                 }
                 if (indexa != null && indexb != null) {
                     if (indexa != indexb) {
-
                         int sa = mappppp.get(indexa).size();
                         int sb = mappppp.get(indexb).size();
                         if (sa > sb) {
-                            Set<String> ss = mappppp.get(indexb);
+                            List<String> ss = mappppp.get(indexb);
                             for (String s : ss) {
                                 mappppp.get(indexa).add(s);
                                 setIndex.put(s, indexa);
                             }
                             mappppp.remove(indexb);
                         } else {
-                            Set<String> ss = mappppp.get(indexa);
+                            List<String> ss = mappppp.get(indexa);
                             for (String s : ss) {
                                 mappppp.get(indexb).add(s);
                                 setIndex.put(s, indexb);
                             }
                             mappppp.remove(indexa);
                         }
-
                     }
                 }
                 if (indexa == null && indexb == null) {
-                    Set<String> s = new HashSet<>();
+                    List<String> s = new ArrayList<>();
                     s.add(ida);
                     s.add(idb);
                     String idxStr = String.valueOf(idx);
@@ -74,8 +74,8 @@ public class SolutionV6 {
             line = br.readLine();
         }
 
-        for (Map.Entry<String, Set<String>> s : mappppp.entrySet()) {
-            Set<String> result = s.getValue();
+        for (Map.Entry<String, List<String>> s : mappppp.entrySet()) {
+            List<String> result = s.getValue();
             MainFrame.addSet(result.toArray(new String[result.size()]));
         }
     }
