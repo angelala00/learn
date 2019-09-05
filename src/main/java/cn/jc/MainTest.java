@@ -1,18 +1,13 @@
 package cn.jc;
 
-import java.util.BitSet;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class MainTest {
     public static void main(String[] args){
-        int a = 1;
-        for (int i = 1; i <= 20 ; i++) {
-            a = a * 4;
-            System.out.println("a=" + a + " i=" + i);
-        }
-        BitSet bs;
+        String[] arrays = new String[]{"11","22","33"};
+        List<String> list = Arrays.asList(arrays);
+        list.add("44");
+        System.out.println(list.size());
 
 //        Set<String> seta = new HashSet<>();
 //        System.out.println(seta.hashCode());
