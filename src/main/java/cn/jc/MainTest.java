@@ -4,10 +4,56 @@ import java.util.*;
 
 public class MainTest {
     public static void main(String[] args){
-        String[] arrays = new String[]{"11","22","33"};
-        List<String> list = Arrays.asList(arrays);
-        list.add("44");
-        System.out.println(list.size());
+
+
+
+
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.add("4");
+        list.add("5");
+        for (String item : list) {
+            if ("4".equals(item)) {
+                list.remove(item);
+            }
+        }
+        System.out.println(list);
+
+        int a = 1;
+        switch (a) {
+            case 2:
+                System.out.println("print 2 ");
+            case 1:
+                System.out.println("print 1 ");
+            default:
+                System.out.println("first default print ");
+            case 3:
+                System.out.println("print 3 ");
+        }
+
+        String param = null;
+        switch (param) {
+            case "param":
+                System.out.println("print param");
+                break;
+            case "String":
+                System.out.println("print String");
+                break;
+            case "null":
+                System.out.println("print null");
+                break;
+            default:
+                System.out.println("second default print");
+        }
+
+
+
+//        String[] arrays = new String[]{"11","22","33"};
+//        List<String> list = Arrays.asList(arrays);
+//        list.add("44");
+//        System.out.println(list.size());
 
 //        Set<String> seta = new HashSet<>();
 //        System.out.println(seta.hashCode());
