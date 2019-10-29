@@ -1,6 +1,7 @@
 package cn.jc.exercise.leetcode;
 
-import java.util.TreeMap;
+import java.util.ArrayList;
+import java.util.List;
 
 class Solution {
     public int maxProduct(int[] nums) {
@@ -23,6 +24,23 @@ class Solution {
         int[] nums = new int[]{2, 0, 2, -1, 4, -2, -3, -1};
         int result = new Solution().maxProduct(nums);
         System.out.println("result=" + result);
+    }
+
+
+    public List<Integer> find(int[] nums) {
+        List<Integer> r = new ArrayList<>();
+        int i = 0;
+        while (i < nums.length) {
+            if (i < nums[i]) {
+                i = nums[i];
+            } else {
+                if (i == nums[i]) {
+                    r.add(i);
+                }
+                i++;
+            }
+        }
+        return r;
     }
 
 }
