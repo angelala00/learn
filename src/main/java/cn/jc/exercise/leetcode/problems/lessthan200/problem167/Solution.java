@@ -1,4 +1,4 @@
-package cn.jc.exercise.leetcode.problems.lessthan500.problem167;
+package cn.jc.exercise.leetcode.problems.lessthan200.problem167;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package cn.jc.exercise.leetcode.problems.lessthan500.problem189;
+package cn.jc.exercise.leetcode.problems.lessthan200.problem189;
 
 /**
  * 有思路，代码没写出来

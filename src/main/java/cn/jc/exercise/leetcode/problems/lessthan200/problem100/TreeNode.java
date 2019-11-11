@@ -1,4 +1,4 @@
-package cn.jc.exercise.leetcode.problems.lessthan500.problem100;
+package cn.jc.exercise.leetcode.problems.lessthan200.problem100;
 
 class TreeNode {
     int val;

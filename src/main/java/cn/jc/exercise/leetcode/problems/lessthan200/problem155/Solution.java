@@ -1,4 +1,4 @@
-package cn.jc.exercise.leetcode.problems.lessthan500.problem155;
+package cn.jc.exercise.leetcode.problems.lessthan200.problem155;
 
 import java.util.ArrayList;
 import java.util.List;
