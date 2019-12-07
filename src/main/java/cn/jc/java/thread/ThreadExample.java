@@ -20,7 +20,8 @@ public class ThreadExample {
         int nThreads = 5000;
         ExecutorService pool2 = new ThreadPoolExecutor(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
         Runnable t1 = null;
-        pool2.submit(t1);
+        Future<?> f = pool2.submit(t1);
+//        pool2.ex
         String s = null;
 
     }
