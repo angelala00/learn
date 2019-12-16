@@ -3,22 +3,11 @@ package cn.jc.exercise.leetcode.problems.lessthan200.problem137;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 位运算操作简单，时间快，空间小，但还没有理解 TODO 看网站解法
+ */
 class Solution {
     public int singleNumber(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        for (int i = 0; i < nums.length; i++) {
-            Integer tmp = map.get(nums[i]);
-            if (tmp == null) {
-                map.put(nums[i], 1);
-            } else {
-                if (tmp == 2) {
-                    map.remove(nums[i]);
-                } else {
-                    map.put(nums[i], tmp + 1);
-                }
-            }
-            // System.out.println(map);
-        }
-        return map.keySet().iterator().next();
+        return -1;
     }
 }

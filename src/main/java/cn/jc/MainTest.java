@@ -1,5 +1,6 @@
 package cn.jc;
 
+import java.text.NumberFormat;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
@@ -7,15 +8,12 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Semaphore;
 
 public class MainTest {
+
     public static void main(String[] args){
+        Map<String,String> map = null;
+        for (Map.Entry<String, String> entry : map.entrySet()) {
 
-        HashMap<Integer, Integer> map = new HashMap<>();
-        Integer a = map.get(1);
-        map.keySet().iterator().next();
-//        int b = map.get(1);
-        System.out.println("a="+a);
-
-//
+        }
 //        new RuntimeException();
 //        Semaphore sp = new Semaphore(1);
 //        CountDownLatch cdl = new CountDownLatch(2);
