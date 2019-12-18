@@ -9,11 +9,10 @@ import java.util.concurrent.Semaphore;
 
 public class MainTest {
 
-    public static void main(String[] args){
-        Map<String,String> map = null;
-        for (Map.Entry<String, String> entry : map.entrySet()) {
 
-        }
+    public static void main(String[] args){
+
+        Map<String,String> map;
 //        new RuntimeException();
 //        Semaphore sp = new Semaphore(1);
 //        CountDownLatch cdl = new CountDownLatch(2);
