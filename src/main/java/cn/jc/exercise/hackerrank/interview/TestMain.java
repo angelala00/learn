@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * airbnb interview
+ */
 public class TestMain {
     public static void main(String args[] ) throws Exception {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT */
@@ -11,14 +14,15 @@ public class TestMain {
         //[first_name], [age] years old, is from [city] and is interested in [interests].
         //
         //Elena,Martinez,emrt@lsofnbr.rt,"cooking, traveling",superhost,Valencia,42
-        Scanner scan = new Scanner(System.in);
         String inputString = "Weronika,Zaborska,njkfdsv@dsgfk.sn,\"running, sci-fi\",new,Krakow,25\n" +
                 "Ryuichi,Akiyama,jkg@ljnsfd.fjn,music,guide,Tokyo,65\n" +
                 "Elena,Martinez,emrt@lsofnbr.rt,\"cooking, traveling\",superhost,Valencia,42\n" +
                 "\"John \"\"Mo\"\"\",Smith,sfn@flkaei.km,biking and hiking,,\"Seattle, WA\",23";
-        inputString = scan.nextLine();
+        System.out.println(inputString);
+//        Scanner scan = new Scanner(System.in);
+//        inputString = scan.nextLine();
         String[] lines = inputString.split("\n");
-        scan.close();
+//        scan.close();
         for (String line : lines) {
             String r = formatLine(line);
             System.out.println(r);

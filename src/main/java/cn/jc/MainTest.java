@@ -2,36 +2,34 @@ package cn.jc;
 
 import java.text.NumberFormat;
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.Semaphore;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicReferenceArray;
+import java.util.concurrent.locks.LockSupport;
 
 public class MainTest {
 
 
     public static void main(String[] args){
+        String a = "123";
+        String b = "123";
+        String c = new String("123");
+        String d = new String("123");
+        System.out.println(a == b);
+        System.out.println(c == d);
+        System.out.println(b == c);
 
-        Map<String,String> map;
+//        LockSupport.parkNanos(20*1000*1000);
+//
+//        ConcurrentHashMap<String, String> chm;
+
+//        AtomicReferenceArray<WindowWrap<String>> array;
+
 //        new RuntimeException();
 //        Semaphore sp = new Semaphore(1);
 //        CountDownLatch cdl = new CountDownLatch(2);
 //        CyclicBarrier cb = new CyclicBarrier(1);
 //        CopyOnWriteArrayList cowal = new CopyOnWriteArrayList();
 ////        Collections.synchronized
-//
-//        ArrayList<String> list = new ArrayList<String>(1);
-//        list.add("1");
-//        list.add("2");
-//        list.add("3");
-//        list.add("4");
-//        list.add("5");
-//        for (String item : list) {
-//            if ("4".equals(item)) {
-//                list.remove(item);
-//            }
-//        }
-//        System.out.println(list);
 //
 //        int a = 1;
 //        switch (a) {
