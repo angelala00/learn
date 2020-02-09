@@ -16,7 +16,7 @@ import java.util.Map;
 public class Solution {
     private String map1dir;
     private String map2dir;
-    private Map<String, String> setIndex = new HashMap<>(100000);
+    private Map<String, String> setIndex = new HashMap<String, String>(100000);
 
     public void init(String tempDir) throws Exception {
         // 此部分不计入执行用时，提供了临时目录用于暂存数据，请合理发挥。

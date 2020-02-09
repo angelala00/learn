@@ -40,8 +40,8 @@ public class SolutionV5 {
 
     class SubSolution1 {
         SubSolution1 ss1 = null;
-        private Map<Integer, Integer> setIndex = new HashMap<>(10000);
-        private Map<Integer, Set<Integer>> list = new HashMap<>(10000);
+        private Map<Integer, Integer> setIndex = new HashMap<Integer, Integer>(10000);
+        private Map<Integer, Set<Integer>> list = new HashMap<Integer, Set<Integer>>(10000);
         private int idx = 0;
 
         public void inputData(Integer ida, Integer idb) {
@@ -64,7 +64,7 @@ public class SolutionV5 {
                 }
             }
             if (indexa == -1 && indexb == -1) {
-                Set<Integer> s = new HashSet<>();
+                Set<Integer> s = new HashSet<Integer>();
                 s.add(ida);
                 s.add(idb);
                 list.put(idx, s);
@@ -77,7 +77,7 @@ public class SolutionV5 {
         public Map<Integer, Set<Integer>> getOutputDataMap() {
             if (ss1 != null) {
                 Map<Integer, Set<Integer>> ssssss = ss1.getOutputDataMap();
-                Set<Integer> removeset = new HashSet<>();
+                Set<Integer> removeset = new HashSet<Integer>();
                 for (Map.Entry<Integer, Set<Integer>> entry : list.entrySet()) {
                     Integer idkey = entry.getKey();
                     if (removeset.contains(idkey)) {
@@ -142,7 +142,7 @@ public class SolutionV5 {
                 }
             }
             if (indexa == -1 && indexb == -1) {
-                Set<String> s = new HashSet<>();
+                Set<String> s = new HashSet<String>();
                 s.add(ida);
                 s.add(idb);
                 list.put(idx, s);

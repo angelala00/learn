@@ -34,11 +34,11 @@ public class Solution10 {
         private SubSolution subSolution = null;
 
         private int idx = 0;
-        private Map<String, String> mappppp1 = new HashMap<>();
+        private Map<String, String> mappppp1 = new HashMap<String, String>();
 
-        private Map<String, List<String>> mappppp2 = new HashMap<>();
+        private Map<String, List<String>> mappppp2 = new HashMap<String, List<String>>();
 
-        private Set<String> temppp = new HashSet<>();
+        private Set<String> temppp = new HashSet<String>();
 
         public void addData(String[] arr) {
             String idxStr = String.valueOf(idx);
@@ -47,7 +47,7 @@ public class Solution10 {
             if (arr0idx == null && arr1idx == null) {
                 mappppp1.put(arr[0], idxStr);
                 mappppp1.put(arr[1], idxStr);
-                List<String> list = new ArrayList<>();
+                List<String> list = new ArrayList<String>();
                 list.add(arr[0]);
                 list.add(arr[1]);
                 mappppp2.put(idxStr, list);

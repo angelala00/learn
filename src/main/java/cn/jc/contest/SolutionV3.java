@@ -13,8 +13,8 @@ import java.util.Set;
  * 通用版本
  */
 public class SolutionV3 {
-    private Map<String, Integer> setIndex = new HashMap<>(10000);
-    private Map<Integer, Set<String>> mappppp = new HashMap<>(100000);
+    private Map<String, Integer> setIndex = new HashMap<String, Integer>(10000);
+    private Map<Integer, Set<String>> mappppp = new HashMap<Integer, Set<String>>(100000);
 
     public void init(String tempDir) throws Exception {
         // 此部分不计入执行用时，提供了临时目录用于暂存数据，请合理发挥。
@@ -50,7 +50,7 @@ public class SolutionV3 {
                     }
                 }
                 if (indexa == -1 && indexb == -1) {
-                    Set<String> s = new HashSet<>();
+                    Set<String> s = new HashSet<String>();
                     s.add(ida);
                     s.add(idb);
                     mappppp.put(idx, s);

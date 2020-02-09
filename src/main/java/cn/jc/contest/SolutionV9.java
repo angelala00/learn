@@ -13,8 +13,8 @@ import java.util.Map;
  * V9
  */
 public class SolutionV9 {
-    private Map<String, String> setIndex = new HashMap<>(100000);
-    private Map<String, List<String>> mappppp = new HashMap<>(1000000);
+    private Map<String, String> setIndex = new HashMap<String, String>(100000);
+    private Map<String, List<String>> mappppp = new HashMap<String, List<String>>(1000000);
 
     public void init(String tempDir) throws Exception {
         // 此部分不计入执行用时，提供了临时目录用于暂存数据，请合理发挥。
@@ -62,7 +62,7 @@ public class SolutionV9 {
     }
 
     private void addNewLine(String index, String[] arr) {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         list.add(arr[0]);
         list.add(arr[1]);
         mappppp.put(index, list);

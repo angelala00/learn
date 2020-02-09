@@ -5,18 +5,41 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 import java.util.concurrent.locks.LockSupport;
+import java.util.logging.Logger;
 
 public class MainTest {
 
-
+    public int minSetSize(int[] arr) {
+        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+        for (int i = 0; i < arr.length; i++) {
+            if (map.containsKey(arr[i])) {
+                map.put(arr[i],map.get(arr[i])+1);
+            } else {
+                map.put(arr[i],1);
+            }
+        }
+        Integer[] r = new Integer[map.values().size()];
+        map.values().toArray(r);
+        Arrays.sort(r);
+        int count = 0;
+        int sum = 0;
+        for (int i = r.length - 1; i >= 0; i--) {
+            count++;
+            sum += r[i];
+            if (sum >= arr.length / 2) {
+                break;
+            }
+        }
+        return count;
+    }
+    public int[] kWeakestRows(int[][] mat, int k) {
+//        Logger.getGlobal().
+        return null;
+    }
     public static void main(String[] args){
-        String a = "123";
-        String b = "123";
-        String c = new String("123");
-        String d = new String("123");
-        System.out.println(a == b);
-        System.out.println(c == d);
-        System.out.println(b == c);
+
+        TreeMap<String, String> a;
+        System.out.println(new MainTest().minSetSize(new int[]{3,3,3,3,5,5,5,2,2,7}));
 
 //        LockSupport.parkNanos(20*1000*1000);
 //

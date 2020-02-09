@@ -66,11 +66,11 @@ public class Solution {
             int b = arr[i][1];
 
             if (!allMap.containsKey(a)) {
-                allMap.put(a, new ArrayList<>());
+                allMap.put(a, new ArrayList<Integer>());
             }
             allMap.get(a).add(b);
             if (!allMap.containsKey(b)) {
-                allMap.put(b, new ArrayList<>());
+                allMap.put(b, new ArrayList<Integer>());
             }
             allMap.get(b).add(a);
         }
@@ -102,7 +102,7 @@ public class Solution {
         }
     }
 
-    static List<Integer> picks = new ArrayList<>();
+    static List<Integer> picks = new ArrayList<Integer>();
     public static void bianli(Node node) {
         System.out.println(node.idx);
         if (needPick(node)) {

@@ -1,6 +1,5 @@
 package cn.jc.exercise.hackerrank.interview;
 
-import javax.xml.bind.SchemaOutputResolver;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

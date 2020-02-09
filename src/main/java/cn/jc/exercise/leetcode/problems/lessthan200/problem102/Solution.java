@@ -8,7 +8,7 @@ class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         int countCrrentLayer = 0;
         int countNextLayer = 0;
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
 
         queue.offer(root);
         countCrrentLayer++;

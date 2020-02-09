@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 
 public class ThreadExample3 {
     static int sum = 0;
-    static ThreadLocal<Integer> subsum = new ThreadLocal<>();
+    static ThreadLocal<Integer> subsum = new ThreadLocal<Integer>();
 
     static CountDownLatch countDownLatch = new CountDownLatch(4);
     private static int averageAge2(List<Student> students) throws InterruptedException {

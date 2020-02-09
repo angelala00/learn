@@ -26,7 +26,7 @@ class Solution {
         int currentLayer = 0;
 
         while (lastLayer != 0 || currentLayer != 0) {
-            List<Integer> layerList = new ArrayList<>();
+            List<Integer> layerList = new ArrayList<Integer>();
             list.add(layerList);
             for (int i = lastLayer; i >= 1; i--) {
                 TreeNode node = queue.poll();

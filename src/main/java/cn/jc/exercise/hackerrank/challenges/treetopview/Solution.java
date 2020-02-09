@@ -27,7 +27,7 @@ class Solution {
     */
     public static void topView(Node root) {
         Map<Integer,Integer> map = new TreeMap<Integer,Integer>();
-        Queue<Node> queue = new LinkedList<>();
+        Queue<Node> queue = new LinkedList<Node>();
         Queue<Integer> queue2 = new LinkedList<Integer>();
         queue.add(root);
         queue2.add(0);

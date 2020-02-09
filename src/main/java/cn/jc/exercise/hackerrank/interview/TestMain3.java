@@ -23,7 +23,7 @@ public class TestMain3 {
         //last page set
         int lineIndex = 1;
         int resultIndex = 0;
-        Set<String> tmpSet = new HashSet<>();
+        Set<String> tmpSet = new HashSet<String>();
         for (String line : datas) {
             //往结果里面放，判断当前页的集合中是否有重复，如果有，放到另一个集合中去
             //判断，如果放够5个元素了，追回一个换行符号，记录新起一行

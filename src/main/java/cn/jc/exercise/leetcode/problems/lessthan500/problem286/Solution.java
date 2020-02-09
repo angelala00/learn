@@ -5,7 +5,7 @@ import java.util.List;
 
 class Solution {
     public List<Integer> lexicalOrder(int n) {
-        List<Integer> resultList = new ArrayList<>();
+        List<Integer> resultList = new ArrayList<Integer>();
         int lastint = 0;
         for (int i = 1; i <= n; i++) {
             Integer intvar;

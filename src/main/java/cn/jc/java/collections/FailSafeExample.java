@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class FailSafeExample {
     public static void main(String[] args) {
-        Map<String, String> premiumPhone = new ConcurrentHashMap<>();
+        Map<String, String> premiumPhone = new ConcurrentHashMap<String, String>();
         premiumPhone.put("Apple", "iPhone");
         premiumPhone.put("HTC", "HTC one");
         premiumPhone.put("Samsung", "S5");

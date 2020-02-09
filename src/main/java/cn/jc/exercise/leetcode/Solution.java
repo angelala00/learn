@@ -4,7 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Solution {
+    private static int aaaa;
+    private static int bbbb;
+    public void test(Solution aaa){
+        aaaa++;
+        bbbb++;
+    }
+
     public int maxProduct(int[] nums) {
+        var aaa = new Solution();
+        test(aaa);
+        List<String> list = new ArrayList<String>(){
+
+        };
+
+
+
         int max = Integer.MIN_VALUE, imax = 1, imin = 1;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] < 0) {
@@ -28,7 +43,7 @@ class Solution {
 
 
     public List<Integer> find(int[] nums) {
-        List<Integer> r = new ArrayList<>();
+        List<Integer> r = new ArrayList<Integer>();
         int i = 0;
         while (i < nums.length) {
             if (i < nums[i]) {

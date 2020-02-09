@@ -13,8 +13,8 @@ import java.util.Set;
  * V3优化版本
  */
 public class SolutionV6 {
-    private Map<String, String> setIndex = new HashMap<>(100000);
-    private Map<String, Set<String>> mappppp = new HashMap<>(1000000);
+    private Map<String, String> setIndex = new HashMap<String, String>(100000);
+    private Map<String, Set<String>> mappppp = new HashMap<String, Set<String>>(1000000);
 
     public void init(String tempDir) throws Exception {
         // 此部分不计入执行用时，提供了临时目录用于暂存数据，请合理发挥。

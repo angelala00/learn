@@ -33,7 +33,7 @@ public class SolutionV1 {
      * @param inputPath 输入文件路径，请不要hack它-_-。
      */
     public void processv(String inputPath) throws Exception {
-        List<Set<String>> list = new ArrayList<>();
+        List<Set<String>> list = new ArrayList<Set<String>>();
         BufferedReader br = Files.newBufferedReader(Paths.get(inputPath));
         String line = br.readLine();
         while (line != null && line.length() > 0) {
@@ -55,7 +55,7 @@ public class SolutionV1 {
                 }
 
                 if (!contain) {
-                    Set<String> s = new HashSet<>();
+                    Set<String> s = new HashSet<String>();
                     s.add(lineArray[0].trim());
                     s.add(lineArray[1].trim());
                     list.add(s);
